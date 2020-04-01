@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML_Task</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="togglearea">
+            <label onclick="onclickHandler()" for="toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div class="search-icon">
+                <img src="images/search.png" width="30px" height="30px" alt="S" />
+            </div>
+        </div>
+
+        <input type="checkbox" id="toggle">
+        <div class="sidebar" id="header-center">
+            <a href="#"><b id="header-space">Discover</b></a>
+            <a href="#"><b id="header-space" class="h-live">Live</b></a>
+            <a href="#"><b id="header-space" class="h-job">Jobs</b></a>
+            <img id="header-space" class="h-apple" src="images/apple-logo.png" width="30px" height="30px" alt="f">
+        </div>
+        <script>
+            function onclickHandler() {
+                let x = document.getElementById("main-body").style
+                if (x.marginLeft !== "200px") {
+                    x.marginLeft = "200px"
+                } else {
+                    x.marginLeft = "0px"
+                }
+
+                let y = document.getElementById("left-slider").style
+                if (y.marginLeft !== "200px") {
+                    y.marginLeft = "200px"
+                } else {
+                    y.marginLeft = "0px"
+                }
+            }
+        </script>
+
+        <div id="main-body">
+            <div class="header">
+                <div id="header-left">
+                    <a href="#">
+                        <h2>Behance</h2>
+                    </a>
+                </div>
+                <div id="header-center">
+                    <a href="#"><b id="header-space">Discover</b></a>
+                    <a href="#"><b id="header-space" class="h-live">Live</b></a>
+                    <a href="#"><b id="header-space" class="h-job">Jobs</b></a>
+                    <button id="header-space" class="signup-button">Sign Up With Email</button>
+                    <i id="header-space" class="h-or">or</i>
+                    <img id="header-space" class="h-apple" src="images/apple-logo.png" width="30px" height="30px"
+                        alt="f">
+                    <img id="header-space" class="h-facebook" src="images/facebook.png" width="30px" height="30px"
+                        alt="f">
+                    <img id="header-space" class="h-google" src="images/google.png" width="30px" height="30px" alt="f">
+
+                </div>
+                <div id="header-right">
+                    <img id="header-space" src="images/search.png" width="30px" height="30px" alt="S" />
+                    <a href="#">
+                        <p class="singin" id="header-space">Signin</p>
+                    </a>
+                    <img id="header-space" class="adobe-logo" src="images/Adobe-Logo.png" width="40px" height="20px"
+                        alt="S" />
+                    <a href="#"><b class="h-adobe">Adobe</b></a>
+                </div>
+            </div>
+
+            <div id="slider">
+                <div id="box" class="image-container">
+                    <img class="slider-img first-img" src="images/image1.jpeg">
+                    <img class="slider-img" src="images/image3.jpeg">
+                    <img class="slider-img" src="images/image6.jpeg">
+                    <img class="slider-img" src="images/image7.jpeg">
+                    <img class="slider-img" src="images/image8.jpeg">
+                    <img class="slider-img" src="images/image1.jpeg">
+                    <img class="slider-img" src="images/image11.jpeg">
+                    <img class="slider-img" src="images/image12.jpeg">
+                    <img class="slider-img" src="images/image13.jpeg">
+                    <img class="slider-img" src="images/image14.jpeg">
+                    <img class="slider-img" src="images/image15.jpeg">
+                    <img class="slider-img" src="images/image9.jpeg">
+                    <img class="slider-img" src="images/image10.jpeg">
+                    <img class="slider-img" src="images/image2.jpeg">
+                    <img class="slider-img" src="images/image4.jpeg">
+                    
+                </div>
+
+                <!-- buttons for controls slider -->
+                <button id="left-slider" class="prew fa fa-chevron-left slider-button" onclick="prewImage()"><img
+                        src="images/espalda.png" width="30px" alt=""></button>
+                <button class="slider-button next" onclick="nextImage()"><img src="images/proximo.png" width="30px"
+                        alt=""></button>
+                <button class="slider-button next2"><img src="images/mas.png" width="30px" alt=""></button>
+            </div>
+            <!-- script for image slider -->
+            <script>
+
+                function prewImage() {
+                    document.getElementById('box').scrollLeft -= 200;
+                }
+                function nextImage() {
+                    document.getElementById('box').scrollLeft += 200;
+                }
+
+            </script>
+
+            <div class="sub-header">
+                <div class="sub-header-container">
+                    <button id="shb">All Categories</button>
+                    <button id="shb">Architecture</button>
+                    <button id="shb">Interior design</button>
+                    <button id="shb">Architecture Photography</button>
+                    <button id="shb">Architecture Visualization</button>
+                </div>
+
+            </div>
+            <div class="title">
+                <h1>Product Design</h1>
+            </div>
+            <div class="description">
+                <h2 id="h2-desc">Find curated interaction design work from cutting edge UI/UX design to detailed
+                    iconography
+                </h2>
+            </div>
+            <div class="follow-button">
+                <button id="follow-button">Follow Product Design</button>
+            </div>
+            <div class="image-body">
+                <div class="box-img-cont">
+                    <img class="box-img" src="images/image1.jpeg">
+                    <div class="box-avatar">
+                        <div>
+                            <img src="images/img_avatar.png" alt="Avatar" class="avatar">
+                            <b id="post-admin">post admin</b>
+                        </div>
+                        <div>
+                            <img src="images/me-gusta.png" alt="like" class="like-button"><b
+                                id="likes-count">127</b></img>
+                            <img src="images/vision.png" alt="views" class="views-button"><b
+                                id="likes-count">127</b></img>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-img-cont">
+                    <img class="box-img" src="images/image6.jpeg">
+                    <div class="box-avatar">
+                        <div>
+                            <img src="images/img_avatar.png" alt="Avatar" class="avatar">
+                            <b id="post-admin">post admin</b>
+                        </div>
+                        <div>
+                            <img src="images/me-gusta.png" alt="like" class="like-button"><b
+                                id="likes-count">127</b></img>
+                            <img src="images/vision.png" alt="views" class="views-button"><b
+                                id="likes-count">127</b></img>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-img-cont">
+                    <img class="box-img" src="images/image7.jpeg">
+                    <div class="box-avatar">
+                        <div>
+                            <img src="images/img_avatar.png" alt="Avatar" class="avatar">
+                            <b id="post-admin">post admin</b>
+                        </div>
+                        <div>
+                            <img src="images/me-gusta.png" alt="like" class="like-button"><b
+                                id="likes-count">127</b></img>
+                            <img src="images/vision.png" alt="views" class="views-button"><b
+                                id="likes-count">127</b></img>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-img-cont">
+                    <img class="box-img" src="images/image8.jpeg">
+                    <div class="box-avatar">
+                        <div>
+                            <img src="images/img_avatar.png" alt="Avatar" class="avatar">
+                            <b id="post-admin">post admin</b>
+                        </div>
+                        <div>
+                            <img src="images/me-gusta.png" alt="like" class="like-button"><b
+                                id="likes-count">127</b></img>
+                            <img src="images/vision.png" alt="views" class="views-button"><b
+                                id="likes-count">127</b></img>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-img-cont">
+                    <img class="box-img" src="images/image9.jpeg">
+                    <div class="box-avatar">
+                        <div>
+                            <img src="images/img_avatar.png" alt="Avatar" class="avatar">
+                            <b id="post-admin">post admin</b>
+                        </div>
+                        <div>
+                            <img src="images/me-gusta.png" alt="like" class="like-button"><b
+                                id="likes-count">127</b></img>
+                            <img src="images/vision.png" alt="views" class="views-button"><b
+                                id="likes-count">127</b></img>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-img-cont">
+                    <img class="box-img" src="images/image10.jpeg">
+                    <div class="box-avatar">
+                        <div>
+                            <img src="images/img_avatar.png" alt="Avatar" class="avatar">
+                            <b id="post-admin">post admin</b>
+                        </div>
+                        <div>
+                            <img src="images/me-gusta.png" alt="like" class="like-button"><b
+                                id="likes-count">127</b></img>
+                            <img src="images/vision.png" alt="views" class="views-button"><b
+                                id="likes-count">127</b></img>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-img-cont">
+                    <img class="box-img" src="images/image11.jpeg">
+                    <div class="box-avatar">
+                        <div>
+                            <img src="images/img_avatar.png" alt="Avatar" class="avatar">
+                            <b id="post-admin">post admin</b>
+                        </div>
+                        <div>
+                            <img src="images/me-gusta.png" alt="like" class="like-button"><b
+                                id="likes-count">127</b></img>
+                            <img src="images/vision.png" alt="views" class="views-button"><b
+                                id="likes-count">127</b></img>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-img-cont">
+                    <img class="box-img" src="images/image12.jpeg">
+                    <div class="box-avatar">
+                        <div>
+                            <img src="images/img_avatar.png" alt="Avatar" class="avatar">
+                            <b id="post-admin">post admin</b>
+                        </div>
+                        <div>
+                            <img src="images/me-gusta.png" alt="like" class="like-button"><b
+                                id="likes-count">127</b></img>
+                            <img src="images/vision.png" alt="views" class="views-button"><b
+                                id="likes-count">127</b></img>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-img-cont">
+                    <img class="box-img" src="images/image13.jpeg">
+                    <div class="box-avatar">
+                        <div>
+                            <img src="images/img_avatar.png" alt="Avatar" class="avatar">
+                            <b id="post-admin">post admin</b>
+                        </div>
+                        <div>
+                            <img src="images/me-gusta.png" alt="like" class="like-button"><b
+                                id="likes-count">127</b></img>
+                            <img src="images/vision.png" alt="views" class="views-button"><b
+                                id="likes-count">127</b></img>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-img-cont">
+                    <img class="box-img" src="images/image14.jpeg">
+                    <div class="box-avatar">
+                        <div>
+                            <img src="images/img_avatar.png" alt="Avatar" class="avatar">
+                            <b id="post-admin">post admin</b>
+                        </div>
+                        <div>
+                            <img src="images/me-gusta.png" alt="like" class="like-button"><b
+                                id="likes-count">127</b></img>
+                            <img src="images/vision.png" alt="views" class="views-button"><b
+                                id="likes-count">127</b></img>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-img-cont">
+                    <img class="box-img" src="images/image15.jpeg">
+                    <div class="box-avatar">
+                        <div>
+                            <img src="images/img_avatar.png" alt="Avatar" class="avatar">
+                            <b id="post-admin">post admin</b>
+                        </div>
+                        <div>
+                            <img src="images/me-gusta.png" alt="like" class="like-button"><b
+                                id="likes-count">127</b></img>
+                            <img src="images/vision.png" alt="views" class="views-button"><b
+                                id="likes-count">127</b></img>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-img-cont">
+                    <img class="box-img" src="images/image2.jpeg">
+                    <div class="box-avatar">
+                        <div>
+                            <img src="images/img_avatar.png" alt="Avatar" class="avatar">
+                            <b id="post-admin">post admin</b>
+                        </div>
+                        <div>
+                            <img src="images/me-gusta.png" alt="like" class="like-button"><b
+                                id="likes-count">127</b></img>
+                            <img src="images/vision.png" alt="views" class="views-button"><b
+                                id="likes-count">127</b></img>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-img-cont">
+                    <img class="box-img" src="images/image3.jpeg">
+                    <div class="box-avatar">
+                        <div>
+                            <img src="images/img_avatar.png" alt="Avatar" class="avatar">
+                            <b id="post-admin">post admin</b>
+                        </div>
+                        <div>
+                            <img src="images/me-gusta.png" alt="like" class="like-button"><b
+                                id="likes-count">127</b></img>
+                            <img src="images/vision.png" alt="views" class="views-button"><b
+                                id="likes-count">127</b></img>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-img-cont">
+                    <img class="box-img" src="images/image4.jpeg">
+                    <div class="box-avatar">
+                        <div>
+                            <img src="images/img_avatar.png" alt="Avatar" class="avatar">
+                            <b id="post-admin">post admin</b>
+                        </div>
+                        <div>
+                            <img src="images/me-gusta.png" alt="like" class="like-button"><b
+                                id="likes-count">127</b></img>
+                            <img src="images/vision.png" alt="views" class="views-button"><b
+                                id="likes-count">127</b></img>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-img-cont">
+                    <img class="box-img" src="images/image5.jpeg">
+                    <div class="box-avatar">
+                        <div>
+                            <img src="images/img_avatar.png" alt="Avatar" class="avatar">
+                            <b id="post-admin">post admin</b>
+                        </div>
+                        <div>
+                            <img src="images/me-gusta.png" alt="like" class="like-button"><b
+                                id="likes-count">127</b></img>
+                            <img src="images/vision.png" alt="views" class="views-button"><b
+                                id="likes-count">127</b></img>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
